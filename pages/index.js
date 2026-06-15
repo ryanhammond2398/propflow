@@ -17,7 +17,7 @@ export default function PropFlow() {
   const [data, setData] = useState(INITIAL_DATA)
   const [modal, setModal] = useState(null)
   const [aiMessages, setAiMessages] = useState([
-    { role: 'assistant', text: "Hi! I'm your PropFlow AI assistant. I can help you understand your portfolio, draft owner reports, identify late payment risks, and answer any property management questions. What would you like to know?" }
+    { role: 'assistant', text: "Hi! I'm your PropFlow AI assistant. I can help you understand your portfolio, draft owner reports, flag late payment risks, and answer any property management questions. Try asking me something or pick a suggestion below." }
   ])
   const [aiInput, setAiInput] = useState('')
   const [aiLoading, setAiLoading] = useState(false)
@@ -46,7 +46,7 @@ export default function PropFlow() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           prompt: userMsg,
-          systemPrompt: `You are PropFlow AI, a smart property management assistant. You help landlords and property managers understand their portfolio, draft professional communications, identify risks, and make better decisions. Be concise, practical, and specific. Current portfolio context: ${portfolioContext}`
+          systemPrompt: `You are PropFlow AI, a smart property management assistant. You help landlords and property managers understand their portfolio, draft professional communications, identify risks, and make better decisions. Be concise, practical, and specific. Write in plain conversational text only — no markdown, no asterisks, no bullet points with dashes, no tables, no headers with pound signs. Just clear natural paragraphs. Current portfolio context: ${portfolioContext}`
         })
       })
       const json = await res.json()
