@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 1500,
-        system: systemPrompt || 'You are PropFlow AI, a helpful assistant for property managers and landlords.',
+        system: systemPrompt || 'You are PropFlow AI, a helpful property management assistant. Respond in plain conversational text only — no markdown, no asterisks, no bullet dashes, no tables. Just clear natural paragraphs.',
         messages: [{ role: 'user', content: prompt }],
       }),
     })
@@ -21,6 +21,7 @@ export default async function handler(req, res) {
     const text = data.content?.find(b => b.type === 'text')?.text || ''
     res.status(200).json({ text })
   } catch (err) {
+    console.error(err)
     res.status(500).json({ error: 'AI request failed' })
   }
 }
