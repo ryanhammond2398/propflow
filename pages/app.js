@@ -135,7 +135,7 @@ export default function App() {
         <aside className="sidebar">
           <div className="sidebar-logo">
             <div className="logo-mark">
-              Prop<span>Flow</span>
+              {"Prop"}<span>{"Flow"}</span>
             </div>
             <div className="logo-sub">Property Management</div>
           </div>
