@@ -35,8 +35,7 @@ export default function Landing() {
         {/* NAV */}
         <nav className="landing-nav">
           <div className="landing-logo">
-            <div className="logo-icon">🏠</div>
-            {"Prop"}<span>{"Flow"}</span>
+            PropFlow
           </div>
           <div className="landing-nav-links">
             <button className="ghost" onClick={() => router.push('/pricing')}>Pricing</button>
@@ -166,7 +165,7 @@ export default function Landing() {
         {/* FOOTER */}
         <footer className="landing-footer">
           <div className="footer-inner">
-            <div className="footer-logo">{"Prop"}<span>{"Flow"}</span></div>
+            <div className="footer-logo">PropFlow</div>
             <div className="footer-links">
               <span className="footer-link" onClick={() => router.push('/pricing')}>Pricing</span>
               <span className="footer-link" onClick={() => router.push('/terms')}>Terms</span>

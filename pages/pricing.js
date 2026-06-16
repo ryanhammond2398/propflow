@@ -8,7 +8,6 @@ export default function Pricing() {
       <Head><title>Pricing — PropFlow</title></Head>
       <nav className="landing-nav">
         <div className="landing-logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-          <div className="logo-icon">🏠</div>Prop<span>Flow</span>
         </div>
         <button className="primary" onClick={() => router.push('/app')}>Try free →</button>
       </nav>

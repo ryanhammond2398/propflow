@@ -8,7 +8,6 @@ export default function Privacy() {
       <Head><title>Privacy Policy — PropFlow</title></Head>
       <nav className="landing-nav">
         <div className="landing-logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-          <div className="logo-icon">🏠</div>Prop<span>Flow</span>
         </div>
       </nav>
       <div style={{ maxWidth: 700, margin: '0 auto', padding: '4rem 1.5rem' }}>
