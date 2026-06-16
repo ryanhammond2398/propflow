@@ -135,8 +135,8 @@ export default function App() {
         <aside className="sidebar">
           <div className="sidebar-logo">
             <div className="logo-mark">
-              <div className="logo-icon" style={{ width: 28, height: 28, fontSize: 14 }}>🏠</div>
-              Prop<span>Flow</span>
+              <div className="logo-icon" style={{ width: 28, height: 28, fontSize: 14, flexShrink: 0 }}>🏠</div>
+              <span style={{ color: 'var(--text)' }}>Prop</span><span>Flow</span>
             </div>
             <div className="logo-sub">Property Management</div>
           </div>
